@@ -1,0 +1,166 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677,#4e085f);
+    padding: 10px;
+}
+.todo {
+    width: 100%;
+    max-width: 540px;
+    background-color: white;
+    margin: 100px auto 20px;
+    border-radius: 10px;
+    padding: 40px 30px 70px;
+}
+.todo h2 {
+    color: #801e4c;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+button {
+    
+    outline: none;
+    padding: 16px 50px;
+    
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    background: linear-gradient(90deg,#ff5945,#0499fd );
+    background-size: 400% 400%;
+    background-position: 100%;
+    transition: 300ms ease-in;
+    border: none;
+    
+}
+button:hover {
+    
+    background-position: 0%;
+    transition: 500ms;
+}
+
+    
+ul {
+   line-height: 1.6;
+}
+
+
+ul li {
+    list-style-type: none;
+    font-size: 17px;
+    padding: 12px 18px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    border-radius: 30px;
+}
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(thumbnail/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    background-image: url(thumbnail/checked.png);
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 500ms;
+}
+ul li span:hover {
+    background: red;
+    color: white;
+    transition: 500ms;
+}
+.socmed {
+    width: 50%;
+    margin-top: 20px;
+    position: absolute;
+    display: flex;
+   flex-direction: row;
+   justify-content: left;
+   gap: 30px;
+   font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    
+.container {
+        width: 100%;
+        
+    }
+.todo {
+    background-color: #15367700;
+    color: white;
+    margin: none;
+    
+}
+.todo h2 {
+    color: white;
+    font-size: 30px;
+}
+ul li span {
+    color: white;
+}
+ul li:hover {
+    background-color: #383838;
+}
+.socmed {
+    width: 50%;
+    justify-content: left;
+    margin-top: 100px;
+    
+}
+}
