@@ -190,6 +190,7 @@ ul li:hover {
     color: white;
 }
 .socmed {
+    display: none;
     width: 50%;
     justify-content: left;
     position: fixed;
